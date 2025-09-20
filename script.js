@@ -4,8 +4,10 @@ console.log(message);
 
 // Error 2: 
 console.log(document);
+
 let button = document.querySelector('#actionButton'); 
 
+console.log('Button#actionButton', button);
 
 button.addEventListener('click', eventHandler); 
 
@@ -21,14 +23,15 @@ function displayOutput() {
   output.innerText = 'You clicked the button!';
 }
 
-// Error 6: Misusing variable scope
+let localMessage = 'Initial message';
+
+// Error 6:
 function updateMessage() {
   localMessage = 'Updated message';
-  console.log(localMessage); 
 }
-updateMessage();{
+
+updateMessage();
 console.log(localMessage); 
-}
 
 // Error 7:
 document.getElementById('testButton').addEventListener('click', testFunction());
@@ -44,56 +47,71 @@ console.log('Sum is: ' + (number1 - number2));
 
 // Error 9: 
 let nullVar = null;
-console.log(nullVar.Var);
+console.log(nullVar);
 
 // Error 10:
 let caseSensitiveVar = 'Case matters';
-console.log(CaseSensitiveVar);
+console.log(caseSensitiveVar);
 
 // Error 11:
 let importantData =
   "This string must be logged to the console. It's important!";
-console.log('importantData');
+console.log(importantData);
 
 // Error 12: 
-tryToCallFunction();
+
 
 // Error 13:
-let user = { namee: 'Alice' };
+let user = {
+  name: 'Alice',
+  age: 18
+};
+
 console.log(user.name)
 
 // Error 14: 
 let someNumber = 123;
-console.log(someNumber.toUpperCase()); 
+console.log(someNumber); 
+
+let textToUpper = 'something to upper';
+console.log(textToUpper.toUpperCase());
 
 // Error 15: 
+
 let greeting = "Hello, world!";
 
 // Error 16: 
-for (let i = 0; i < 5; i++); {
-    console.log(i);
+for (let i = 0; i < 5; i++) {
+  console.log(i);
 }
 
 // Error 17:
 let five = '5';
+
 if (five === 5) {
-    console.log('Five is equal to 5'); // This one should be logged
+  console.log('Five is equal to 5'); 
 } else {
-    console.log('Five is not equal to 5'); 
+  console.log('Five is not equal to 5'); 
 }
+
 // Error 18:
 Array.prototype.push = function() {
-    console.log('Array push method is overwritten');
+  console.log('Array push method is overwritten');
 };
 let numbers = [];
 numbers.push(1);
 console.log(numbers);
 
 // Error 19:
-console.log(x);
 x = 5;
+console.log(x);
 
 // Error 20:
-let myString = 'Hello';
-myString.property = 'World';
-console.log(myString.property); 
+let myString = 'Hello World';
+console.log(myString);
+
+let myStringObject = {
+  text1: "Goodbye World"
+};
+
+console.log(myStringObject.text1);

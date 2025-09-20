@@ -1,9 +1,12 @@
 // Error 1:
 let message = 'Welcome to the debugging exercise!';
-console.log(mesage); 
+console.log(message); 
 
 // Error 2: 
-let button = document.querySelector('.actionButton'); 
+console.log(document);
+let button = document.querySelector('#actionButton'); 
+
+
 button.addEventListener('click', eventHandler); 
 
 // Error 3: 
@@ -20,10 +23,12 @@ function displayOutput() {
 
 // Error 6: Misusing variable scope
 function updateMessage() {
-  let localMessage = 'Updated message';
+  localMessage = 'Updated message';
+  console.log(localMessage); 
 }
-updateMessage();
+updateMessage();{
 console.log(localMessage); 
+}
 
 // Error 7:
 document.getElementById('testButton').addEventListener('click', testFunction());
@@ -39,7 +44,7 @@ console.log('Sum is: ' + (number1 - number2));
 
 // Error 9: 
 let nullVar = null;
-console.log(nullVar.length);
+console.log(nullVar.Var);
 
 // Error 10:
 let caseSensitiveVar = 'Case matters';
@@ -62,7 +67,7 @@ let someNumber = 123;
 console.log(someNumber.toUpperCase()); 
 
 // Error 15: 
-let greeting = Hello, world!;
+let greeting = "Hello, world!";
 
 // Error 16: 
 for (let i = 0; i < 5; i++); {
@@ -75,7 +80,7 @@ if (five === 5) {
     console.log('Five is equal to 5'); // This one should be logged
 } else {
     console.log('Five is not equal to 5'); 
-
+}
 // Error 18:
 Array.prototype.push = function() {
     console.log('Array push method is overwritten');
@@ -92,4 +97,3 @@ x = 5;
 let myString = 'Hello';
 myString.property = 'World';
 console.log(myString.property); 
-
